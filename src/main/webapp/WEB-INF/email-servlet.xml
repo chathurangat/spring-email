@@ -25,12 +25,12 @@
                 name="mappings">
             <props>
                 <prop
-                        key="/sending/*">
+                        key="/emailForm">
                     emailController
                 </prop>
 
                 <prop
-                        key="/sending/email/*">
+                        key="/sendEmail">
                     emailController
                 </prop>
 

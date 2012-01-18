@@ -1,5 +1,6 @@
 package org.convey.example.email;
 
+import org.convey.example.model.EmailMessage;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 
@@ -18,15 +19,19 @@ public class EmailSender {
         this.mailSender = mailSender;
     }
 
-    public void sendMail(String from, String to, String subject, String msg) {
+
+    public void sendEmail(EmailMessage emailMessage){
 
         SimpleMailMessage message = new SimpleMailMessage();
 
-        message.setFrom(from);
-        message.setTo(to);
-        message.setSubject(subject);
-        message.setText(msg);
+        message.setFrom(emailMessage.getSenderEmailAddress());
+        message.setTo(emailMessage.getReceiverEmailAddress());
+        message.setSubject(emailMessage.getSubject());
+        message.setText(emailMessage.getMessageBody());
+        //sending the message
         mailSender.send(message);
+
     }
+
 
 }

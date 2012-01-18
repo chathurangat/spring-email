@@ -1,17 +1,20 @@
 
 package org.convey.example.model;
 
+import org.springframework.stereotype.Component;
+
 /**
  * $LastChangedDate:  $
  * $LastChangedBy:  $
  * $LastChangedRevision:  $
  */
+@Component
 public class EmailMessage {
 
-    String senderEmailAddress;
-    String receiverEmailAddress;
-    String subject;
-    String messageBody;
+    private String senderEmailAddress;
+    private String receiverEmailAddress;
+    private String subject;
+    private String messageBody;
 
 
     public void setMessageBody(String messageBody){
@@ -50,4 +53,7 @@ public class EmailMessage {
     }
 
 
+    public String getSenderEmailAddress() {
+        return senderEmailAddress;
+    }
 }
