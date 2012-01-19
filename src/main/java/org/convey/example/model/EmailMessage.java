@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailMessage {
 
-    private String senderEmailAddress;
+
     private String receiverEmailAddress;
     private String subject;
     private String messageBody;
@@ -37,10 +37,6 @@ public class EmailMessage {
         return this.receiverEmailAddress;
     }
 
-    public void setSenderEmailAddress(String senderEmailAddress){
-
-        this.senderEmailAddress=senderEmailAddress;
-    }
 
     public void setSubject(String subject) {
 
@@ -53,7 +49,4 @@ public class EmailMessage {
     }
 
 
-    public String getSenderEmailAddress() {
-        return senderEmailAddress;
-    }
 }

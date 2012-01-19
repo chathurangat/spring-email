@@ -49,7 +49,6 @@ public class EmailController {
 
 
         logger.debug(" ********************* ready to send the email **********************");
-        logger.debug(" sender email address [{}]", email.getSenderEmailAddress());
         logger.debug(" receiver email address [{}]", email.getReceiverEmailAddress());
         logger.debug(" email subject [{}]", email.getSubject());
         logger.debug(" email body [{}]", email.getMessageBody());

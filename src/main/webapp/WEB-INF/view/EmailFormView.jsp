@@ -10,8 +10,6 @@
 <form:form commandName="email" method="POST" action="sendEmail">
 
     <p>Email Form </p>
-    Sender Email
-    <form:input path="senderEmailAddress"/>
     <br/><br/>
 
     Receiver Email

@@ -24,7 +24,6 @@ public class EmailSender {
 
         SimpleMailMessage message = new SimpleMailMessage();
 
-        message.setFrom(emailMessage.getSenderEmailAddress());
         message.setTo(emailMessage.getReceiverEmailAddress());
         message.setSubject(emailMessage.getSubject());
         message.setText(emailMessage.getMessageBody());
